@@ -644,8 +644,6 @@ private def mkAuxConstructions (views : Array InductiveView) : TermElabM Unit :=
     if hasUnit && hasEq && hasHEq then mkNoConfusion n
     if hasUnit && hasProd then mkBelow n
     if hasUnit && hasProd then mkIBelow n
-  for view in views do
-    let n := view.declName;
     if hasUnit && hasProd then mkBRecOn n
     if hasUnit && hasProd then mkBInductionOn n
 
